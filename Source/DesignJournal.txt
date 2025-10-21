@@ -1,0 +1,6 @@
+Student: Malavika Kilaru[z2023286]
+
+Observer Pattern Design Decision:
+
+ The Observer Pattern is the ideal solution for this assignment because it establishes a one-to-many dependency relationship between Christopher Columbus 'ship (the subject) and the pirate ships (the Observers).when Columbus moves to a new location, all registered pirates ships automatically notified of his position without Columbus needing to know anything about the pirates' existence or implementation details. This loose coupling is crucial for maintainability-we can easily add or remove pirates without modifying the ship class code. Each PirateShip class implements the shipObserver interface, which defines the update() method contract. When Columbus moves ,the ship class notifyObservers(),which iterates through all registered observers and calls their update() methods with the new location. This allows each pirates to independently calculate and execute their chase strategy. The separation of concerns is clear: the Ship class focuses solely on movement and boundary checking, while the PirateShip class  handles logic. This design also demonstrates the open/closed Principle -the system is open for extension(adding more pirates) but closed for modification(no change to ship class needed).
+
